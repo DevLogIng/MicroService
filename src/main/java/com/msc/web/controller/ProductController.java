@@ -127,7 +127,7 @@ public class ProductController {
     @ApiOperation(value = "Trier la liste des produits en ordre alphabétique croissant !")
     @GetMapping(value = "/TriProduits")
     public List<Product> trierProduitsParOrdreAlphabetique (){
-    	return productDao.trierProduitsParOrdreAlphabetique();
+    	return productDao.findAllByOrderByNomAsc();
     }
 
 }
